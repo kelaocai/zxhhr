@@ -7,11 +7,6 @@ class user extends spModel
         // 这个是注册的验证规则
         var $verifier_register = array(
                 "rules" => array( // 规则
-                        'username' => array( 
-                                'notnull' => TRUE, 
-                                'minlength' => 3, 
-                                'maxlength' => 15, 
-                        ),
                         'password' => array(  
                                 'notnull' => TRUE, 
                                 'minlength' => 6, 
@@ -76,5 +71,8 @@ class user extends spModel
                         ),
                 ),
         );
+		
+		
+		
 }
 ?>

@@ -15,23 +15,25 @@
 				<div class="row">
 					<div class="span8">
 						<h3 class="text-center">注册信息</h3>
-						<form class="form-horizontal" action="?c=register&a=reg_submit" method="post">
-							<div class="control-group">
+						<form id="reg_form" class="form-horizontal" action="?c=register&a=reg_submit" method="post">
+							<div id="gp_email" class="control-group">
 								<label class="control-label" for="inputEmail">邮箱</label>
 								<div class="controls">
 									<div class="input-prepend">
 										<span class="add-on">@</span>
-										<input id="inputEmail" type="text" />
+										<input id="input_email" type="text" name="email"/>
 									</div>
+									<span id="tip_email" class="help-inline"></span>
 								</div>
 							</div>
 							<div class="control-group">
-								
+
 								<label class="control-label" for="inputPassword">密码</label>
 								<div class="controls">
 									<div class="input-prepend">
 										<span class="add-on"><i class="icon-lock"></i></span>
-									<input id="inputPassword" type="password" /></div>
+										<input id="inputPassword" type="password"  name="password" />
+									</div>
 								</div>
 							</div>
 
@@ -40,17 +42,19 @@
 								<div class="controls">
 									<div class="input-prepend">
 										<span class="add-on"><i class="icon-lock"></i></span>
-									<input id="inputConfirmPassword" type="password" /></div>
+										<input id="inputConfirmPassword" type="password"  name="compassword"/>
+									</div>
 								</div>
 							</div>
 
 							<div class="control-group">
-								
+
 								<label class="control-label" for="inputPassword">手机号码</label>
 								<div class="controls">
 									<div class="input-prepend">
 										<span class="add-on"><i class="icon-signal"></i></span>
-									<input id="inputMobilePhone" type="text" /></div>
+										<input id="inputMobilePhone" type="text" name="phone"/>
+									</div>
 								</div>
 							</div>
 
@@ -60,7 +64,7 @@
 								<div class="controls">
 									<div class="input-prepend">
 										<span class="add-on"><i class="icon-qrcode"></i></span>
-									<input class="span2" id="inputVerify" type="text">
+										<input class="span2" id="inputVerify" type="text" name="verifyno">
 									</div>
 									<button class="btn btn-info" type="button">
 										免费获取
@@ -74,7 +78,7 @@
 									<label class="checkbox">
 										<input type="checkbox" />
 										我已经阅读并同意<a href="#">《在线合伙人服务协议》</a></label>
-									<button type="submit" class="btn btn-primary btn-large">
+									<button id="btn_reg_submit" type="submit" class="btn btn-primary btn-large" >
 										免费注册
 									</button>
 								</div>
@@ -99,9 +103,32 @@
 			</div>
 
 		</div>
+
+		<!-- 提交结果对话框-->
+
+		<div id="submitModal" class="modal hide fade">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true" >
+					&times;
+				</button>
+				<h3>对话框标题</h3>
+			</div>
+			<div class="modal-body">
+				<p>
+					<div id="reg_submit_result"></>
+				</p>
+			</div>
+			<div class="modal-footer">
+				<a href="#" class="btn">关闭</a>
+				<a href="#" class="btn btn-primary">Save changes</a>
+			</div>
+		</div>
+
 		<!-- /container -->
 		<!-- jquery -->
 		<script src="js/jquery.min.js"></script>
+		<script src="js/jquery.form.js"></script>
 		<script src="js/bootstrap.min.js"></script>
+		<script src="js/reg.js"></script>
 	</body>
 </html>
