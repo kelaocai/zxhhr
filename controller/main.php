@@ -7,4 +7,8 @@ class main extends spController
 		$this->cnt=spDB('hello')->findCount();
 		$this->display('index.html');
 	}
+	
+	function topic(){
+		$this->display('topic.html');
+	}
 }
