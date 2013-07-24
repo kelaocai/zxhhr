@@ -24,7 +24,7 @@ $(document).ready(function() {
         if (email != '') {
             $.get("?c=register&a=check_email&email=" + email, null, function(response) {
                 if (response != "ok") {
-                    $("#tip_email").html(response);
+                    $("#tip_email").html("该邮箱已被注册");
                     $("#gp_email").addClass('error');
                 } else {
                     $("#tip_email").html("此邮箱可用");
@@ -35,6 +35,10 @@ $(document).ready(function() {
             });
         }
 
+    });
+
+    $("#reg_btn_close").click(function() {
+       $('#submitModal').modal('hide');
     });
 
 });

@@ -3,6 +3,12 @@ class user extends spModel
 {
         public $pk = 'id';
         public $table = 'user';
+		
+		
+		//添加自定义规则
+		var $addrules=array(
+		'checkemail'=>array('register','verifier_email')
+		);
 
         // 这个是注册的验证规则
         var $verifier_register = array(
@@ -20,6 +26,7 @@ class user extends spModel
                                 'email' => TRUE,  
                                 'minlength' => 6, 
                                 'maxlength' => 30,
+                                'checkemail'=>TRUE
                         ),
                 ),
                 "messages" => array( // 提示消息，从上面的rules复制下来，很快捷。
@@ -41,6 +48,7 @@ class user extends spModel
                                 'email' => "电子邮件格式不正确",  
                                 'minlength' => "电子邮件长度不能少于6个字符",  
                                 'maxlength' => "电子邮件长度不能大于30个字符", 
+                                'checkemail'=>"该邮箱已被注册"
                         ),
                 ),
         );
