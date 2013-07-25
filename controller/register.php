@@ -1,7 +1,7 @@
 <?php
 class register extends spController {
 	function reg_new_user_ui() {
-		$this -> display('reg_new_user_ui.html');
+		$this -> display('ui_reg_new_user.html');
 	}
 
 	function reg_submit() {

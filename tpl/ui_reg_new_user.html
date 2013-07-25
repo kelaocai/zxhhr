@@ -14,7 +14,7 @@
 				{include file="nav.html" now_position="新用户注册"}
 				<div class="row">
 					<div class="span8">
-						<h3 class="text-center">注册信息</h3>
+						<h3 class="text-center">注册信息{$test}</h3>
 						<form id="reg_form" class="form-horizontal" action="?c=register&a=reg_submit" method="post">
 							<div id="gp_email" class="control-group">
 								<label class="control-label" for="inputEmail">邮箱</label>
@@ -96,7 +96,7 @@
 							</button>
 						</p>
 						<p>
-							<a class="btn" href="#">立即登录</a>
+							<a class="btn" href="?c=login&a=login_ui">立即登录</a>
 						</p>
 					</div>
 				</div>
