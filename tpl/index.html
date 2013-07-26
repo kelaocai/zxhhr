@@ -4,49 +4,30 @@
 		<meta charset="utf-8">
 		<title>zxhhr</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0"  >
-    <link href="css/bootstrap-responsive.css" rel="stylesheet">
+		<link href="css/bootstrap-responsive.css" rel="stylesheet">
 		<!-- Bootstrap -->
 		<link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
 	</head>
 	<body>
 		<div class="container-fluid">
+
 			<div class="container">
-
-				<div class="masthead">
-					<h3 class="muted">在线合伙人</h3>
-					<div class="navbar">
-						<div class="navbar-inner">
-							<div class="container">
-								<ul class="nav">
-									<li class="active">
-										<a href="#">首页</a>
-									</li>
-									<li>
-										<a href="#">投资项目</a>
-									</li>
-									<li>
-										<a href="#">安全保障</a>
-									</li>
-									<li>
-										<a href="#">帮助中心</a>
-									</li>
-									<li>
-										<a href="#">关于我们</a>
-									</li>
-									<li>
-										<a href="#">联系我们</a>
-									</li>
-								</ul>
-							</div>
-						</div>
-					</div><!-- /.navbar -->
+				{if $login_status}
+				<div class="span12 text-right">
+					欢迎回来,{$user_email}
 				</div>
-
+				{else if}
+				<div class="span12 text-right">
+					<a href="?c=login&a=login_ui">登录</a> | <a href="?c=register&a=reg_new_user_ui">注册</a>
+				</div>
+				{/if}
+				
+				{include file="nav.html" now_position="在线合伙人"}
 				<div class="span12 text-center">
 					<h1 class="text-center"><h1>有多少梦想可以重来？</h1>
 					<p class="lead">
 						梦想携手相随，让太多人心驰神往，只是梦想有时触手可及，有时转瞬即逝，感慨年华，有多少梦可以重来，感谢际遇，有些梦想可以轻轻握在手中
-					</p><a class="btn  btn-large  btn-success" href="#">马上开启</a></h1>
+					</p><a class="btn  btn-large  btn-success" href="?c=register&a=reg_new_user_ui">马上开启</a></h1>
 					<hr>
 				</div>
 

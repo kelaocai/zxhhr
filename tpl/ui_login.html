@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>zxhhr</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"  >
+		<link href="css/bootstrap-responsive.css" rel="stylesheet">
+		<!-- Bootstrap -->
+		<link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+	</head>
+	<body>
+		<div class="container-fluid">
+			<div class="container">
+				{include file="nav.html" now_position="登录"}
+				<div class="row">
+					<div class="span8">
+						<h3 class="text-center">系统登录</h3>
+						<form id="login_form" class="form-horizontal" action="?c=login&a=login_submit" method="post">
+							<div id="gp_email" class="control-group">
+								<label class="control-label" for="inputEmail">邮箱</label>
+								<div class="controls">
+									<div class="input-prepend">
+										<span class="add-on">@</span>
+										<input id="input_email" type="text" name="email"/>
+									</div>
+									<span id="tip_email" class="help-inline"></span>
+								</div>
+							</div>
+							<div class="control-group">
+
+								<label class="control-label" for="inputPassword">密码</label>
+								<div class="controls">
+									<div class="input-prepend">
+										<span class="add-on"><i class="icon-lock"></i></span>
+										<input id="inputPassword" type="password"  name="password" />
+									</div>
+								</div>
+							</div>
+							<div class="control-group">
+								<div class="controls">
+									<button id="btn_reg_submit" type="submit" class="btn btn-primary btn-large" >
+										登录
+									</button>
+								</div>
+							</div>
+						</form>
+					</div>
+					<div class="span4">
+						
+					</div>
+				</div>
+			</div>
+
+		</div>
+
+		<!-- 提交结果对话框-->
+
+		<div id="submitModal" class="modal hide fade">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true" >
+					&times;
+				</button>
+				<h3>对话框标题</h3>
+			</div>
+			<div class="modal-body">
+				<p>
+					<div id="reg_submit_result"></>
+				</p>
+			</div>
+			<div class="modal-footer">
+				<a href="#" class="btn" id="reg_btn_close">关闭</a>
+				<a href="#" class="btn btn-primary">Save changes</a>
+			</div>
+		</div>
+
+		<!-- /container -->
+		<!-- jquery -->
+		<script src="js/jquery.min.js"></script>
+		<script src="js/jquery.form.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+	</body>
+</html>
