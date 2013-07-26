@@ -5,6 +5,7 @@ class login extends spController {
 	}
 	
 	function login_submit(){
+		
 	 	$usrobj=spClass('user');
 		$con=array('email'=>$this->spArgs('email'),'password'=>$this->spArgs('password'));
 		$rs=$usrobj->find($con);
