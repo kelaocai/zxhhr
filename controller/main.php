@@ -8,7 +8,7 @@ class main extends spController
 		//$this->cnt=spDB('hello')->findCount();
 		//$_SESSION['user_email']="kekk";
 		//$this->login_status=$_SESSION['user_email'];
-		session_start();
+		//session_start();
 		if ($_SESSION['user_email']){
 			$this->login_status=TRUE;
 			$this->user_email=$_SESSION['user_email'];
