@@ -10,19 +10,9 @@
 	</head>
 	<body>
 		<div class="container-fluid">
-
 			<div class="container">
-				{if $login_status}
-				<div class="span12 text-right">
-					欢迎回来,{$user_email}
-				</div>
-				{else if}
-				<div class="span12 text-right">
-					<a href="?c=login&a=login_ui">登录</a> | <a href="?c=register&a=reg_new_user_ui">注册</a>
-				</div>
-				{/if}
-				
-				{include file="nav.html" now_position="在线合伙人"}
+				<{include file="login_status.html"}>
+				<{include file="nav.html" now_position="在线合伙人"}>
 				<div class="span12 text-center">
 					<h1 class="text-center"><h1>有多少梦想可以重来？</h1>
 					<p class="lead">
@@ -53,7 +43,7 @@
 						</p>
 					</div>
 					<div class="span4">
-						<h2>我要借款{$cnt}</h2>
+						<h2>我要借款<{$cnt}></h2>
 						<p>
 							您所要提供的资料视情况而定，详情请咨询信安门店。该等材料包括但不限于：
 							1、身份证明（身份证）；

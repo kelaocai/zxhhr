@@ -1,0 +1,9 @@
+<{if ""!=$smarty.session.user_email}>
+<div class="span12 text-right">
+        <a href="?c=main&a=index"><i class="icon-home"></i></a> 欢迎回来,<{$user_email}> <a href="?c=my&a=portal">| 用户中心</a> | <a href="?c=main&a=logout" >安全退出</a>&nbsp;
+</div>
+<{else if}>
+<div class="span12 text-right">
+    <a href="<{spUrl c=main a=login_ui}>">登录</a> | <a href="?c=register&a=reg_new_user_ui">注册</a>
+</div>
+<{/if}>

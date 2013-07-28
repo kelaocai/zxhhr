@@ -11,11 +11,11 @@
 	<body>
 		<div class="container-fluid">
 			<div class="container">
-				{include file="nav.html" now_position="登录"}
+				<{include file="nav.html" now_position="登录"}>
 				<div class="row">
 					<div class="span8">
 						<h3 class="text-center">系统登录</h3>
-						<form id="login_form" class="form-horizontal" action="?c=login&a=login_submit" method="post">
+						<form id="login_form" class="form-horizontal" action="<{spUrl c=main a=login}>" method="post">
 							<div id="gp_email" class="control-group">
 								<label class="control-label" for="inputEmail">邮箱</label>
 								<div class="controls">

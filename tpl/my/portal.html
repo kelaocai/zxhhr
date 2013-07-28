@@ -1,0 +1,97 @@
+<{include file="head.html" }>
+<div class="container">
+    <div class="row-fluid">
+        <{include file="login_status.html"}>
+        <ul class="breadcrumb">
+            <li>
+                <a href="<{spUrl c=main a=index }>">首页</a><span class="divider">/</span>
+            </li>
+
+            <li class="active">
+                用户中心
+            </li>
+        </ul>
+
+    </div>
+    <div class="row-fluid">
+        <div class="span3">
+            <{include file="my/left.html"}>
+        </div>
+        <div class="span9">
+            <div class="alert alert-block">
+                        <button type="button" class="close" data-dismiss="alert">
+                            &times;
+                        </button>
+                        <h4>提示!</h4>
+                       <div class="progress progress-info progress-striped">
+                资料认证进度20%<div class="bar" style="width: 20%"></div>
+            </div>
+                        您还有<a href="<{spUrl c=my a=info}>"><span class="badge badge-inverse">3</span></a>项未完成的认证信息，请尽快提交认证，以免耽误您的投资进度。<a >>>马上认证</a>                       
+                    </div>
+            
+            <div >
+                <h3>账户余额</h3>
+                <p>
+                    <span class="label">资产总额</span> ¥150000 <a href="<{spUrl c=my a=receivable}>">查看应收明细</a> | <a >查看应付明细</a>
+                </p>
+                <p>
+                    <span class="label">可用余额</span> ¥4789.53 <a >提现</a>
+                </p>
+
+            </div>
+            <hr/>
+            <div >
+                <h3>我的投资</h3>
+                <table class="table table-bordered ">
+                    <thead>
+                        <tr>
+                            <th> 编号 </th>
+                            <th> 项目名称 </th>
+                            <th> 主体 </th>
+                            <th> 投资金额 </th>
+                            <th> 预期年化利率 </th>
+                            <th> 期限 </th>
+                            <th> 收益方式 </th>
+                            <th> 交易时间 </th>
+                            <th> 状态 </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td> 1 </td>
+                            <td> 福田旧城改造信托安盈贷 </td>
+                            <td> 合伙公司A</td>
+                            <td> 140000</td>
+                            <td> 15%</td>
+                            <td> 240天</td>
+                            <td> 每月等息还款</td>
+                            <td> 2013-07-25 </td>
+                            <td> 有效 </td>
+                        </tr>
+                        <tr >
+                            <td> 2 </td>
+                            <td> 点点折网创业投资 </td>
+                            <td> 合伙公司B</td>
+                            <td> 10000</td>
+                            <td> 17%</td>
+                            <td> 360天</td>
+                            <td> 每月等息还款</td>
+                            <td> 2013-01-11 </td>
+                            <td> 有效 </td>
+                        </tr>
+
+                    </tbody>
+                </table>
+
+            </div>
+            <hr/>
+            <div >
+                <h3>我的借款</h3>
+
+            </div>
+
+        </div>
+
+    </div>
+</div>
+<{include file="foot.html" }>
