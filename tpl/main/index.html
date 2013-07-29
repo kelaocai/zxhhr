@@ -1,67 +1,71 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<title>zxhhr</title>
-		<meta name="viewport" content="width=device-width, initial-scale=1.0"  >
-		<link href="css/bootstrap-responsive.css" rel="stylesheet">
-		<!-- Bootstrap -->
-		<link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
-	</head>
-	<body>
-		<div class="container-fluid">
-			<div class="container">
-				<{include file="login_status.html"}>
-				<{include file="nav.html" now_position="在线合伙人"}>
-				<div class="span12 text-center">
-					<h1 class="text-center"><h1>有多少梦想可以重来？</h1>
-					<p class="lead">
-						梦想携手相随，让太多人心驰神往，只是梦想有时触手可及，有时转瞬即逝，感慨年华，有多少梦可以重来，感谢际遇，有些梦想可以轻轻握在手中
-					</p><a class="btn  btn-large  btn-success" href="?c=register&a=reg_new_user_ui">马上开启</a></h1>
-					<hr>
-				</div>
+    <head>
+        <meta charset="utf-8">
+        <title>zxhhr</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"  >
+        <link href="css/bootstrap-responsive.css" rel="stylesheet">
+        <!-- Bootstrap -->
+        <link href="css/main.css" rel="stylesheet" >
+        <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+    </head>
+    <body>
+        <div class="container-fluid">
+            <div class="container">
+                <{include file="login_status.html"}>
+                <{include file="nav.html" now_position="在线合伙人"}>
+                <{include file="main/carousel.html"}>
+<div class="text-center"><a class="btn  btn-large  btn-success " href="?c=register&a=reg_new_user_ui">马上开启</a><hr/></div>
+                <div class="row-fluid">
+                    <div class="span4">
+                        <h2>新手必读</h2>
+                        <p>
 
-				<div class="row-fluid">
-					<div class="span4">
-						<h2>新手必读</h2>
-						<p>
+                            为保证投资人的资金安全，采用多管齐下的资金管理制度:您可以实时查询到资金账户的详情，且资金只能转出到您绑定过的银行账号，网站采用国际领先的系统加密及保护技术，采用多管齐下的 24小时监控。
 
-							为保证投资人的资金安全，采用多管齐下的资金管理制度:您可以实时查询到资金账户的详情，且资金只能转出到您绑定过的银行账号，网站采用国际领先的系统加密及保护技术，采用多管齐下的 24小时监控。
+                        </p>
+                        <p>
+                            <a class="btn" href="#">查看详情 &raquo;</a>
+                        </p>
+                    </div>
+                    <div class="span4">
+                        <h2>我要投资</h2>
+                        <p>
+                            年满18周岁，具有完全民事权利能力和民事行为能力，有中华人民共和国公民身份证的大陆公民，可以提交注册、认证申请，通过陆金所的审核，可以成为投资人。大陆公民不包括港、澳、台地区公民。
+                        </p>
+                        <p>
+                            <a class="btn" href="#">查看详情 &raquo;</a>
+                        </p>
+                    </div>
+                    <div class="span4">
+                        <h2>我要借款<{$cnt}></h2>
+                        <p>
+                            您所要提供的资料视情况而定，详情请咨询信安门店。该等材料包括但不限于：
+                            1、身份证明（身份证）；
+                            2、收入证明（银行流水、公司收入证明、税单等）；
+                            3、工作证明（公司开具的工作证明、劳动合同等）；
+                        </p>
+                        <p>
+                            <a class="btn" href="#">查看详情 &raquo;</a>
+                        </p>
+                    </div>
+                </div>
+                <hr />
+                <div class="container">
+                    <div class="row">
+                        <div class="span8">
+                            <{include file="main/hot.html"}>
+                        </div>
+                        <div class="span4">
+                            <{include file="main/promote.html"}>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-						</p>
-						<p>
-							<a class="btn" href="#">查看详情 &raquo;</a>
-						</p>
-					</div>
-					<div class="span4">
-						<h2>我要投资</h2>
-						<p>
-							年满18周岁，具有完全民事权利能力和民事行为能力，有中华人民共和国公民身份证的大陆公民，可以提交注册、认证申请，通过陆金所的审核，可以成为投资人。大陆公民不包括港、澳、台地区公民。
-						</p>
-						<p>
-							<a class="btn" href="#">查看详情 &raquo;</a>
-						</p>
-					</div>
-					<div class="span4">
-						<h2>我要借款<{$cnt}></h2>
-						<p>
-							您所要提供的资料视情况而定，详情请咨询信安门店。该等材料包括但不限于：
-							1、身份证明（身份证）；
-							2、收入证明（银行流水、公司收入证明、税单等）；
-							3、工作证明（公司开具的工作证明、劳动合同等）；
-						</p>
-						<p>
-							<a class="btn" href="#">查看详情 &raquo;</a>
-						</p>
-					</div>
-				</div>
-			</div>
+        </div>
 
-		</div>
-		<!-- /container -->
+        <!-- /container -->
 
-		<!-- jquery -->
-		<script src="js/jquery.min.js"></script>
-		<script src="js/bootstrap.min.js"></script>
-	</body>
-</html>
+        <script src="js/index.js"></script>
+        <{include file="foot.html"}>
