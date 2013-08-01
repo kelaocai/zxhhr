@@ -7,7 +7,7 @@ class user extends spModel
 		
 		//添加自定义规则
 		var $addrules=array(
-		'checkemail'=>array('register','verifier_email')
+		'verify_phoneno'=>array('register','verifier_phoneno')
 		);
 
         // 这个是注册的验证规则
@@ -18,15 +18,15 @@ class user extends spModel
                                 'minlength' => 6, 
                                 'maxlength' => 30,
                         ),
-                        'compassword' => array( 
+                        'confirm_password' => array( 
                                 'equalto' => 'password',
                         ),
-                        'email' => array(  
+                        'phoneno' => array(  
                                 'notnull' => TRUE,
-                                'email' => TRUE,  
-                                'minlength' => 6, 
-                                'maxlength' => 30,
-                                'checkemail'=>TRUE
+                                'minlength' => 11, 
+                                'maxlength' => 11,
+                                'verify_phoneno'=>TRUE
+                                
                         ),
                 ),
                 "messages" => array( // 提示消息，从上面的rules复制下来，很快捷。
@@ -40,15 +40,12 @@ class user extends spModel
                                 'minlength' => "密码长度不能少于6个字符",  
                                 'maxlength' => "密码长度不能大于30个字符", 
                         ),
-                        'compassword' => array( 
+                        'confirm_password' => array( 
                                 'equalto' => '两次输入的密码不一样',
                         ),
-                        'email' => array(   
-                                'notnull' => "电子邮件不能为空",
-                                'email' => "电子邮件格式不正确",  
-                                'minlength' => "电子邮件长度不能少于6个字符",  
-                                'maxlength' => "电子邮件长度不能大于30个字符", 
-                                'checkemail'=>"该邮箱已被注册"
+                        'phoneno' => array(   
+                                'notnull' => "手机号码不能为空",
+                                'verify_phoneno'=>"该手机号码已经被注册"
                         ),
                 ),
         );

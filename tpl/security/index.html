@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"  >
+        <link href="css/bootstrap-responsive.css" rel="stylesheet">
+        <!-- Bootstrap -->
+        <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+    </head>
+    <body>
+        <div class="container">
+            <{include file="nav2.html" now_position="$now_position"}>
+            <div class="row">
+                <div class="span3">
+                    <{include file="my/left.html"}>
+                </div>
+                <div class="span9">
+                    <h3><{$now_position}></h3>
+                    <hr>
+                    <div>
+                        <dl >
+                            <dt>
+                                修改密码 <span class="muted"> 当前密码强度：强</span>
+                            </dt>
+                            <dd>
+                                <a type="button" href="#modal_edit_password" class="btn-primary btn-small" data-toggle="modal"  >修改</a>
+                            </dd>
+                        </dl>
+                        <dl >
+                            <dt>
+                                关联邮箱
+                            </dt>
+                            <dd>
+                                kelaocai@163.com <a type="button" href="#" class="btn-primary btn-small " >修改</a>
+                            </dd>
+                        </dl>
+                        
+                        <dl >
+                            <dt>
+                                关联手机号码
+                            </dt>
+                            <dd>
+                                18682100625 <a type="button" href="#" class="btn-primary btn-small " >挂失</a>
+                            </dd>
+                        </dl>
+                         
+                    </div>
+                </div>
+            </div>
+        </div>
+
+         <{include file="security/modal.html" }>
+        <!-- /container -->
+        <!-- jquery -->
+        <script src="js/jquery.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+    </body>
+</html>

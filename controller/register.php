@@ -1,10 +1,10 @@
 <?php
 class register extends spController {
-	function reg_new_user_ui() {
-		$this -> display('ui_reg_new_user.html');
+	function register_ui() {
+
 	}
 
-	function reg_submit() {
+	function register_submit() {
 		$userobj = spClass('user');
 		//注册校验
 		$userobj -> verifier = $userobj -> verifier_register;
@@ -13,31 +13,83 @@ class register extends spController {
 		if (false == $rs_ver) {
 			//通过验证
 			$now = date("Y-m-d H:i:s", time());
-			$new_user = array("email" => $this -> spArgs('email'), "phone" => $this -> spArgs('phone'), "password" => $this -> spArgs('password'), "reg_date" => $now);
+			$new_user = array("email" => $this -> spArgs('email'), "phone" => $this -> spArgs('phoneno'), "password" => $this -> spArgs('password'), "reg_date" => $now);
 			$rs_create = $userobj -> create($new_user);
 			if ($rs_create > 0) {
-				echo "注册成功！";
+				$success_msg=array("title"=>"注册成功",
+						   "content"=>"恭喜您注册成为本站会员，现在你可以登录后进行相关操作",
+						   "btn_txt"=>"登录",
+						   "btn_action"=>spUrl("main",'login_ui')
+						   				
+				);
+				$this->msg=$success_msg;
+				//dump($success_msg);
+				$this->display("success.html");
 
 			} else {
-				echo "注册新用户错误";
+				$success_msg=array("title"=>"注册失败",
+						   "content"=>"提交失败",
+						   "btn_txt"=>"重新注册",
+						   "btn_action"=>spUrl("register",'register_ui')
+						   );
+				$this->display("error.html");
+						   				
+				
 			}
 		} else {
-			dump($rs_ver);
+			$err_msg=array("title"=>"注册失败",
+						   "content"=>$this->ouput_ver($rs_ver),
+						   "btn_txt"=>"重新注册",
+						   "btn_action"=>spUrl("register",'register_ui')
+						   				
+				);
+			$this->msg=$err_msg;
+			$this->display("error.html");
+			
 		}
 	}
 
-	function check_email() {
-		if ($this -> verifier_email($this -> spArgs('email'))) {
-			echo "ok";
-		} else {
-			echo "error";
+	function check_phoneno(){
+		if($this->verifier_phoneno($this->spArgs('phoneno'))){
+			echo "yes";
+		}else{
+			echo "no";
+		};	
+	}
+	
+
+	function ouput_ver($ver){
+		
+		$rs="<ol>";
+		foreach($ver as $key=>$value){
+			foreach($value as $key2=>$value2){
+				$rs.="<li>".$value2."</li>";
+			}
 		}
+		
+		$rs.="</ol>";
+		
+		return  $rs;
 	}
 
+	
+
+	//验证邮箱
 	function verifier_email($val, $right) {
 
 		$userobj = spClass('user');
 		if ($userobj -> findCount("email='" . $val . "'") > 0) {
+			return FALSE;
+		} else {
+			return TRUE;
+		}
+	}
+	
+	//验证手机号码
+	function verifier_phoneno($val, $right) {
+
+		$userobj = spClass('user');
+		if ($userobj -> findCount("phone='" . $val . "'") > 0) {
 			return FALSE;
 		} else {
 			return TRUE;

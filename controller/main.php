@@ -3,12 +3,7 @@ class main extends spController
 
 {
 	function index(){
-		//echo "Enjoy, Speed of PHP!";
-		
-		//$this->cnt=spDB('hello')->findCount();
-		//$_SESSION['user_email']="kekk";
-		//$this->login_status=$_SESSION['user_email'];
-		//session_start();
+
 		if ($_SESSION['user_email']){
 			$this->login_status=TRUE;
 			$this->user_email=$_SESSION['user_email'];
@@ -27,7 +22,7 @@ class main extends spController
 	function login(){
 		
 	 	$usrobj=spClass('user');
-		$con=array('email'=>$this->spArgs('email'),'password'=>$this->spArgs('password'));
+		$con=array('phone'=>$this->spArgs('phoneno'),'password'=>$this->spArgs('password'));
 		$rs=$usrobj->find($con);
 		if ($rs){
 			$_SESSION['user_email']=$rs['email'];

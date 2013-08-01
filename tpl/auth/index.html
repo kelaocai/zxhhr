@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"  >
+        <link href="css/bootstrap-responsive.css" rel="stylesheet">
+        <!-- Bootstrap -->
+        <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+    </head>
+    <body>
+        <div class="container">
+            <{include file="nav2.html" now_position=<{$now_position}>}>
+            <div class="row">
+                <div class="span3">
+                    <{include file="my/left.html"}>
+                </div>
+                <div class="span9">
+                    <h3><{$now_position}></h3>
+                    <hr>
+                    <div>
+                        <dl >
+                            <dt>
+                                <h4>实名认证</h4>
+                            </dt>
+                            <dd>
+                                只有通过实名认证才能投资和申请借款
+                                <p>
+                                    <a type="button" href="#modal_edit_password" class="btn-primary btn-small" data-toggle="modal"  >立即认证</a>
+                                </p>
+                            </dd>
+                            <dt>
+                                <h4>银行卡认证</h4>
+                            </dt>
+                            <dd>
+                                只有通过银行卡认证才能投资和申请借款
+                                <p>
+                                    <a type="button" href="#modal_edit_password" class="btn-primary btn-small" data-toggle="modal"  >立即认证</a>
+                                </p>
+                            </dd>
+                             <dt>
+                                <h4>第三方支付帐号认证</h4>
+                            </dt>
+                            <dd>
+                                只有通过第三方支付帐号认证才能投资和申请借款
+                                <p>
+                                    <a type="button" href="#modal_edit_password" class="btn-primary btn-small" data-toggle="modal"  >立即认证</a>
+                                </p>
+                            </dd>
+                        </dl>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /container -->
+        <!-- jquery -->
+        <script src="js/jquery.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+    </body>
+</html>

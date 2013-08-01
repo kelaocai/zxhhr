@@ -12,23 +12,24 @@ $(document).ready(function() {
     });
 
     //check email available
-    $('#input_email').focus(function() {
-        $("#tip_email").html("");
-        $("#gp_email").removeClass('error');
-        $("#gp_email").removeClass('success');
+    $('#input_phoneno').focus(function() {
+        $("#tip_phoneno").html("");
+        $("#gp_phoneno").removeClass('error');
+        $("#gp_phoneno").removeClass('success');
     });
 
-    $('#input_email').blur(function() {
+    $('#input_phoneno').blur(function() {
 
-        var email = $(this).val().trim();
-        if (email != '') {
-            $.get("?c=register&a=check_email&email=" + email, null, function(response) {
-                if (response != "ok") {
-                    $("#tip_email").html("该邮箱已被注册");
-                    $("#gp_email").addClass('error');
+        var phoneno = $(this).val().trim();
+        if (phoneno != '') {
+            $.get("?c=register&a=check_phoneno&phoneno=" + phoneno, null, function(response) {
+                //alert(response);
+                if ("no"==response) {
+                    $("#tip_phoneno").html("该手机号码已被注册");
+                    $("#gp_phoneno").addClass('error');
                 } else {
-                    $("#tip_email").html("此邮箱可用");
-                    $("#gp_email").addClass('success');
+                    $("#tip_phoneno").html("该手机号码可用");
+                    $("#gp_phoneno").addClass('success');
 
                 }
                 //

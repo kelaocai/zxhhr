@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"  >
+        <link href="css/bootstrap-responsive.css" rel="stylesheet">
+        <!-- Bootstrap -->
+        <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+    </head>
+    <body>
+        <div class="container">
+            <{include file="nav2.html" now_position="$now_position" now_current="$now_current"}>
+            <div class="row">
+                <div class="span3">
+                    <{include file="my/left.html"}>
+                </div>
+                <div class="span9">
+                    <h3><{$now_position}></h3>
+                    <hr>
+                    <div class="navbar">
+                        <div class="navbar-inner">
+
+                            <ul class="nav">
+                                <li class="active">
+                                    <div class="btn-group">
+                                        <button class="btn">
+                                            <i class="icon-plus"></i>新增
+                                        </button>
+                                        <button class="btn">
+                                            删除
+                                        </button>
+
+                                    </div>
+                                </li>
+                                <li class="divider-vertical"></li>
+                                <li class="dropdown">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"> 添加到组 <b class="caret"></b> </a>
+                                    <ul class="dropdown-menu">
+                                        <li role="presentation">
+                                            <a href="#" tabindex="-1" role="menuitem">常用客户</a>
+                                        </li>
+                                        <li role="presentation">
+                                            <a href="#" tabindex="-1" role="menuitem">中国平安</a>
+                                        </li>
+                                        <li class="divider" role="presentation"></li>
+                                        <li role="presentation">
+                                            <a href="#" tabindex="-1" role="menuitem">新建组...</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="divider-vertical"></li>
+                                <li class="dropdown">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"> 工具 <b class="caret"></b> </a>
+                                    <ul class="dropdown-menu">
+                                        <li role="presentation">
+                                            <a href="#" tabindex="-1" role="menuitem">导入联系人</a>
+                                        </li>
+                                        <li role="presentation">
+                                            <a href="#" tabindex="-1" role="menuitem">导出联系人</a>
+                                        </li>
+                                        <li class="divider" role="presentation"></li>
+                                        <li role="presentation">
+                                            <a href="#" tabindex="-1" role="menuitem">发短信</a>
+                                        </li>
+                                        <li role="presentation">
+                                            <a href="#" tabindex="-1" role="menuitem">发邮件</a>
+                                        </li>
+
+                                    </ul>
+                                </li>
+                                <li class="divider-vertical"></li>
+                                <li>
+                                    <form class="navbar-form pull-left">
+                                        <input type="text" class="span2">
+                                        <button type="submit" class="btn">
+                                            查找
+                                        </button>
+                                    </form>
+                                </li>
+                            </ul>
+
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="span9">
+                            <table class="table table-bordered table-condensed">
+                                <thead>
+                                    <tr>
+                                        <th><label class="checkbox">
+                                            <input type="checkbox" value="">
+                                        </label></th>
+                                        <th> 姓名 </th>
+                                        <th> 手机号码 </th>
+                                        <th> 邮箱 </th>
+                                        <th> 组别 </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><label class="checkbox">
+                                            <input type="checkbox" value="">
+                                        </label></td>
+                                        <td> 老财 </td>
+                                        <td> 13590198185 </td>
+                                        <td> kelaocai@163.com </td>
+                                        <td> 豆蔻 </td>
+                                    </tr>
+                                    <tr class="success">
+                                        <td><label class="checkbox">
+                                            <input type="checkbox" value="">
+                                        </label></td>
+                                        <td> TB - Monthly </td>
+                                        <td> 01/04/2012 </td>
+                                        <td> Approved </td>
+                                        <td> Default </td>
+                                    </tr>
+                                    <tr class="error">
+                                        <td><label class="checkbox">
+                                            <input type="checkbox" value="">
+                                        </label></td>
+                                        <td> TB - Monthly </td>
+                                        <td> 02/04/2012 </td>
+                                        <td> Declined </td>
+                                        <td> Default </td>
+                                    </tr>
+                                    <tr class="warning">
+                                        <td><label class="checkbox">
+                                            <input type="checkbox" value="">
+                                        </label></td>
+                                        <td> TB - Monthly </td>
+                                        <td> 03/04/2012 </td>
+                                        <td> Pending </td>
+                                        <td> Default </td>
+                                    </tr>
+                                    <tr class="info">
+                                        <td><label class="checkbox">
+                                            <input type="checkbox" value="">
+                                        </label></td>
+                                        <td> TB - Monthly </td>
+                                        <td> 04/04/2012 </td>
+                                        <td> Call in to confirm </td>
+                                        <td> Default </td>
+                                    </tr>
+                                    <tr>
+                                        <td><label class="checkbox">
+                                            <input type="checkbox" value="">
+                                        </label></td>
+                                        <td> TB - Monthly </td>
+                                        <td> 01/04/2012 </td>
+                                        <td> Default </td>
+                                        <td> Default </td>
+                                    </tr>
+                                    <tr class="success">
+                                        <td><label class="checkbox">
+                                            <input type="checkbox" value="">
+                                        </label></td>
+                                        <td> TB - Monthly </td>
+                                        <td> 01/04/2012 </td>
+                                        <td> Approved </td>
+                                        <td> Default </td>
+                                    </tr>
+                                    <tr class="error">
+                                        <td><label class="checkbox">
+                                            <input type="checkbox" value="">
+                                        </label></td>
+                                        <td> TB - Monthly </td>
+                                        <td> 02/04/2012 </td>
+                                        <td> Declined </td>
+                                        <td> Default </td>
+                                    </tr>
+                                    <tr class="warning">
+                                        <td><label class="checkbox">
+                                            <input type="checkbox" value="">
+                                        </label></td>
+                                        <td> TB - Monthly </td>
+                                        <td> 03/04/2012 </td>
+                                        <td> Pending </td>
+                                        <td> Default </td>
+                                    </tr>
+                                    <tr class="info">
+                                        <td><label class="checkbox">
+                                            <input type="checkbox" value="">
+                                        </label></td>
+                                        <td> TB - Monthly </td>
+                                        <td> 04/04/2012 </td>
+                                        <td> Call in to confirm </td>
+                                        <td> Default </td>
+                                    </tr>
+                                    <tr>
+                                        <td><label class="checkbox">
+                                            <input type="checkbox" value="">
+                                        </label></td>
+                                        <td> TB - Monthly </td>
+                                        <td> 01/04/2012 </td>
+                                        <td> Default </td>
+                                        <td> Default </td>
+                                    </tr>
+                                    <tr class="success">
+                                        <td><label class="checkbox">
+                                            <input type="checkbox" value="">
+                                        </label></td>
+                                        <td> TB - Monthly </td>
+                                        <td> 01/04/2012 </td>
+                                        <td> Approved </td>
+                                        <td> Default </td>
+                                    </tr>
+                                    <tr class="error">
+                                        <td><label class="checkbox">
+                                            <input type="checkbox" value="">
+                                        </label></td>
+                                        <td> TB - Monthly </td>
+                                        <td> 02/04/2012 </td>
+                                        <td> Declined </td>
+                                        <td> Default </td>
+                                    </tr>
+                                    <tr class="warning">
+                                        <td><label class="checkbox">
+                                            <input type="checkbox" value="">
+                                        </label></td>
+                                        <td> TB - Monthly </td>
+                                        <td> 03/04/2012 </td>
+                                        <td> Pending </td>
+                                        <td> Default </td>
+                                    </tr>
+                                    <tr class="info">
+                                        <td><label class="checkbox">
+                                            <input type="checkbox" value="">
+                                        </label></td>
+                                        <td> TB - Monthly </td>
+                                        <td> 04/04/2012 </td>
+                                        <td> Call in to confirm </td>
+                                        <td> Default </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="span9 text-center">
+                        <div class="pagination">
+                            <ul>
+                                <li>
+                                    <a href="#">Prev</a>
+                                </li>
+                                <li>
+                                    <a href="#">1</a>
+                                </li>
+                                <li>
+                                    <a href="#">2</a>
+                                </li>
+                                <li>
+                                    <a href="#">3</a>
+                                </li>
+                                <li>
+                                    <a href="#">4</a>
+                                </li>
+                                <li>
+                                    <a href="#">5</a>
+                                </li>
+                                <li>
+                                    <a href="#">Next</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /container -->
+        <!-- jquery -->
+        <script src="js/jquery.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+    </body>
+</html>
